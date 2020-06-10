@@ -34,7 +34,7 @@ public class DBInflater implements ApplicationListener<ContextRefreshedEvent> {
         Artist mata = new Artist("Michal", "Matczak", "MATA");
         Publisher sbmaffija = new Publisher("SB Maffija");
         Song hot16challenge = new Song("Hot16Challenge", "Rap", "1983129873",
-                "2020", (Set<Artist>) sbmaffija);
+                "2020", sbmaffija);
         mata.getSongs().add(hot16challenge);
         hot16challenge.getArtists().add(mata);
         publisherRepository.save(sbmaffija);
@@ -45,7 +45,7 @@ public class DBInflater implements ApplicationListener<ContextRefreshedEvent> {
         Artist kartky = new Artist("Jakub", "Jankowski", "Kartky");
         Publisher quequality = new Publisher("QueQuality");
         Song outside = new Song("Outside", "Hip-Hop", "98172391123",
-                "2018", (Set<Artist>) quequality);
+                "2018",  quequality);
         kartky.getSongs().add(outside);
         outside.getArtists().add(kartky);
         publisherRepository.save(quequality);
@@ -57,7 +57,7 @@ public class DBInflater implements ApplicationListener<ContextRefreshedEvent> {
         Artist bedoes = new Artist("Borys", "Przybylski", "BEDOES");
         Publisher sbmlabel = new Publisher("SBM Label");
         Song nadchodzilato = new Song("Nadchodzi Lato", "Rap", "09309823091",
-                "2019", (Set<Artist>) sbmlabel);
+                "2019",  sbmlabel);
         bedoes.getSongs().add(nadchodzilato);
         nadchodzilato.getArtists().add(bedoes);
         publisherRepository.save(sbmlabel);

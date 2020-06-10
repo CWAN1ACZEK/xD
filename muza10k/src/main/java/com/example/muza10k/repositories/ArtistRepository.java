@@ -1,7 +1,10 @@
 package com.example.muza10k.repositories;
 
-import com.example.muza10k.model.Artist;
 import org.springframework.data.repository.CrudRepository;
 
-public interface ArtistRepository extends CrudRepository<Artist, Long> {
+import java.util.Optional;
+
+public interface ArtistRepository extends CrudRepository<com.example.muza10k.model.Artist, Long> {
+    Optional<com.example.muza10k.model.Artist> getFirstByFirstNameAndLastName(String firstName, String lastName);
+    Optional<com.example.muza10k.model.Artist> getFirstByFirstName(String firstName);
 }
